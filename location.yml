@@ -98,7 +98,7 @@ components:
         - Location/Position
     Location:
       allOf:
-        - $ref: './common.yml#/components/schemas/Meta'
+        - $ref: 'https://redblue36.github.io/DataFormatDemoSwaggerUI/common.yml#/components/schemas/Meta'
         - $ref: '#/components/schemas/Position'
         - type: object
           properties:
