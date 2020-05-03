@@ -8,6 +8,9 @@ info:
 
     Introduction
     The Location Component is a data structure used whenever a geographic location needs to be recorded on the Blockchain. The Location Component, contains all the information needed to determine a geographic location. The Location Component is used to define the location of any type of object or entity regardless of whether it is fixed (e.g. a building, port, rail station, etc.) or mobile (e.g. a vehicle or shipping container, etc.
+
+<img src="https://github.com/redblue36/DataFormatDemoSwaggerUI/blob/master/location.png" />
+
   contact:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
