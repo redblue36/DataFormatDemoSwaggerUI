@@ -12,7 +12,7 @@ info:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
 servers:
-  - url: 'https://www.acuwize.com/standards/foundation/location'
+  - url: /
     description: ''
 paths:
   /location: {}
