@@ -1,0 +1,114 @@
+openapi: 3.0.0
+info:
+  title: Location
+  version: v3.0.0
+  description: |-
+    Scope
+    This document defines the Location Component that is used to identify the location of goods within the shipment process. The document identifies data elements and attributes that form a data structure to publish a given component location.
+
+    Introduction
+    The Location Component is a data structure used whenever a geographic location needs to be recorded on the Blockchain. The Location Component, contains all the information needed to determine a geographic location. The Location Component is used to define the location of any type of object or entity regardless of whether it is fixed (e.g. a building, port, rail station, etc.) or mobile (e.g. a vehicle or shipping container, etc.
+  contact:
+    name: Ben Kothari
+    url: 'http://www.acuwize.com'
+servers:
+  - url: 'https://www.acuwize.com/standards/foundation/location'
+    description: ''
+paths:
+  /location: {}
+components:
+  schemas:
+    Position:
+      title: Position
+      type: object
+      description: Position is dependant object and may be used to document locations when they are presented in a hierarchy.  Location Object has all the properties of Position object.  Location Object has mandatory ID (identifier) where position object does not have identifier.
+      properties:
+        name:
+          type: string
+          description: |
+            Name of the location site.
+        qualifier:
+          type: string
+          enum:
+            - Address
+            - GeoCoord
+            - SPLC
+            - City
+            - Link
+            - Multiple
+          description: Type of Location
+        latitude:
+          type: number
+          description: Value representing latitude in degress and minutes
+        longitude:
+          type: number
+          description: Value representing longitude in degrees and minutes
+        accuracyMeters:
+          type: number
+          description: Accuracy of latitude/longitude within meters.
+        altitudeMeters:
+          type: number
+          description: Accuracy of height within meters.
+        SPLC:
+          type: string
+          description: Standard Point Location Code
+        addressLine1:
+          type: string
+          description: 'Street, Apt, Suite information'
+        addressLine2:
+          type: string
+          description: 'Street, Apt #, Suite #, information'
+        city:
+          type: string
+          description: City name
+        stateProvince:
+          type: string
+          description: State or Province name
+        zipPostal:
+          type: string
+          description: Zip code
+        country:
+          type: string
+          description: Name of country
+        countryCode:
+          type: string
+          description: Country code of country
+        buildingName:
+          type: string
+          description: Building name
+        buildingFloor:
+          type: string
+          description: Building floor
+        isle:
+          type: string
+          description: isle 1
+        bin:
+          type: string
+          description: bin 5
+        parkingName:
+          type: string
+          description: 'Yard/Parking/Any kind of open structure: Lot Name, Floor, Isle, LotId'
+        level:
+          type: string
+          description: L5
+        lotId:
+          type: string
+          description: Lot15
+      x-tags:
+        - Location/Position
+    Location:
+      allOf:
+        - $ref: './common.yml#/components/schemas/Meta'
+        - $ref: '#/components/schemas/Position'
+        - type: object
+          properties:
+            positions:
+              type: array
+              description: Array of Positions within a Location site.
+              items:
+                $ref: '#/components/schemas/Position'
+      description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n"
+      x-tags:
+        - Location/Location
+      x-examples:
+        example-1: {}
