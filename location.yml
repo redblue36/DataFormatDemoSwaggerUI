@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Location
+  title: Location Component
   version: v3.0.0
   description: |-
     Scope
