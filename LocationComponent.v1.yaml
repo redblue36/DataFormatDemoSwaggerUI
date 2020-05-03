@@ -1,0 +1,56 @@
+title: LocationComponent
+type: object
+description: Location component description goes here.
+properties:
+  name:
+    type: string
+  qualifier:
+    type: string
+    description: This is the qualifier code
+  positions:
+    type: array
+    uniqueItems: true
+    minItems: 0
+    items:
+      title: Postition
+      type: object
+      properties:
+        name:
+          type: string
+        qualifier:
+          type: string
+        position:
+          type: number
+        latitude:
+          type: number
+        longitude:
+          type: number
+        accuracyMeters:
+          type: number
+        altitudeMeters:
+          type: string
+        SPLC:
+          type: string
+        stationName:
+          type: string
+        address:
+          title: Address
+          type: object
+          properties:
+            ID:
+              type: string
+            line1:
+              type: string
+            line2:
+              type: string
+            city:
+              type: string
+            stateProvince:
+              type: string
+            zipPostal:
+              type: string
+            country:
+              type: string
+          x-examples: {}
+          description: Address element description goes here.
+      description: Position element descr. goes here.
