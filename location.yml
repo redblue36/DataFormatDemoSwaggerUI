@@ -107,7 +107,11 @@ components:
             TODO:  Why is there a "country" and a "countryCode".  The examples in the published doc only include country and show a code value not a name.
         countryCode:
           type: string
-          description: 'Country code of country conforming to standard ISO-3166 [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)'
+          description: |-
+            Country code of country conforming to standard ISO-3166 [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
+
+            TODO are these 2 or 3 character codes?
+            TODO should this be an enumerated list?
         buildingName:
           type: string
           description: Building name
