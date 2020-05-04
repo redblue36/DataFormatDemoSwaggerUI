@@ -18,10 +18,36 @@ paths:
   /location: {}
 components:
   schemas:
+    Location:
+      allOf:
+        - $ref: 'https://redblue36.github.io/DataFormatDemoSwaggerUI/common.yml#/components/schemas/Meta'
+        - $ref: '#/components/schemas/Position'
+        - type: object
+          properties:
+            positions:
+              type: array
+              description: |-
+                Array of Positions within a Location site.
+
+                If a location position has more than 1
+                position, then a sub-class of positions is provided. This array contains 1 or more Position-implementing structures that each describe the location. When the array contains more than 1 structure, each structure is meant to represent the same location but using a different method (i.e. latitude/longitude vs postal address etc).
+
+                Within the Position a precedence number which is optional (starting at 1 and incrementing from there) identifies the order in which structures are preferred. In other words, the structure with a Precedence value of 1 is the ‘native’ or preferred structure to use for determining the location. It is expected that data consumers within the industry will use the structure with Precedence 1 and ignore the others. Data consumers unable to interpret the structure (method) with Precedence 1 would move on to the structure with Precedence 2 but if that one also uses a method unfamiliar to them, then to 3, etc.
+
+                Position structure can contain nested structures including optional (nullable) nested structures to handle scenarios where a method for specifying a location may have instances where a detailed location is needed and others where a detailed location description is not needed (or possible). For example, a location at a Warehouse would have as the root position structure (the root implements Position), the postal address of the warehouse. Within that structure could be nested a warehouse zone identifying an area that the warehouse is sub-divided into. And within the Warehouse Zone structure could be nested a bin or shelf that might identify the specific location needed for a warehouse picker to locate an item
+              items:
+                $ref: '#/components/schemas/Position'
+      description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n"
+      x-tags:
+        - Location/Location
+      x-examples: {}
+      title: Location Component
     Position:
       title: Position
       type: object
       description: Position is dependant object and may be used to document locations when they are presented in a hierarchy.  Location Object has all the properties of Position object.  Location Object has mandatory ID (identifier) where position object does not have identifier.
+      x-tags:
+        - Location/Position
       properties:
         name:
           type: string
@@ -36,10 +62,10 @@ components:
             - City
             - Link
             - Multiple
-          description: Type of Location
+          description: 'Type of Location.  A single or multiple qualifier (multiple qualifier’s: address, GeoCoord, SPLIC, City, etc.)'
         latitude:
           type: number
-          description: Value representing latitude in degress and minutes
+          description: Value representing latitude in degrees and minutes.
         longitude:
           type: number
           description: Value representing longitude in degrees and minutes
@@ -51,7 +77,10 @@ components:
           description: Accuracy of height within meters.
         SPLC:
           type: string
-          description: Standard Point Location Code
+          description: |-
+            Standard Point Location Code standard value per [https://www.railinc.com/rportal/standard-point-location-code](https://www.railinc.com/rportal/standard-point-location-code)
+
+            The rail industry has an industry-specific method of specifying locations called the SPLC. Third parties may not have the ability to interpret this data so railway operators publishing locations in SPLC formats have the ability to publish a second more widely-known method such as latitude/longitude.
         addressLine1:
           type: string
           description: 'Street, Apt, Suite information'
@@ -69,10 +98,13 @@ components:
           description: Zip code
         country:
           type: string
-          description: Name of country
+          description: |-
+            Name of country
+
+            TODO:  Why is there a "country" and a "countryCode".  The examples in the published doc only include country and show a code value not a name.
         countryCode:
           type: string
-          description: Country code of country
+          description: 'Country code of country conforming to standard ISO-3166 [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)'
         buildingName:
           type: string
           description: Building name
@@ -94,21 +126,3 @@ components:
         lotId:
           type: string
           description: Lot15
-      x-tags:
-        - Location/Position
-    Location:
-      allOf:
-        - $ref: 'https://redblue36.github.io/DataFormatDemoSwaggerUI/common.yml#/components/schemas/Meta'
-        - $ref: '#/components/schemas/Position'
-        - type: object
-          properties:
-            positions:
-              type: array
-              description: Array of Positions within a Location site.
-              items:
-                $ref: '#/components/schemas/Position'
-      description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n"
-      x-tags:
-        - Location/Location
-      x-examples: {}
-      title: Location Component
