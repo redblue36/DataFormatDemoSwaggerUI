@@ -37,7 +37,7 @@ components:
                 Position structure can contain nested structures including optional (nullable) nested structures to handle scenarios where a method for specifying a location may have instances where a detailed location is needed and others where a detailed location description is not needed (or possible). For example, a location at a Warehouse would have as the root position structure (the root implements Position), the postal address of the warehouse. Within that structure could be nested a warehouse zone identifying an area that the warehouse is sub-divided into. And within the Warehouse Zone structure could be nested a bin or shelf that might identify the specific location needed for a warehouse picker to locate an item
               items:
                 $ref: '#/components/schemas/Position'
-      description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n\nA UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/location.png)."
+      description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n\nA UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/location.png)."
       x-tags:
         - Location/Location
       x-examples: {}
@@ -48,7 +48,7 @@ components:
       description: |-
         Position is dependant object and may be used to document locations when they are presented in a hierarchy.  Location Object has all the properties of Position object.  Location Object has mandatory ID (identifier) where position object does not have identifier.
 
-        A UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/location.png).
+        A UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/location.png).
       x-tags:
         - Location/Position
       properties:
