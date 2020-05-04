@@ -8,7 +8,6 @@ info:
 
     Introduction
     The Location Component is a data structure used whenever a geographic location needs to be recorded on the Blockchain. The Location Component, contains all the information needed to determine a geographic location. The Location Component is used to define the location of any type of object or entity regardless of whether it is fixed (e.g. a building, port, rail station, etc.) or mobile (e.g. a vehicle or shipping container, etc.
-
   contact:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
@@ -111,5 +110,5 @@ components:
       description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n"
       x-tags:
         - Location/Location
-      x-examples:
-        example-1: {}
+      x-examples: {}
+      title: Location Component
