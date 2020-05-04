@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: common
   version: ''
-  description: Common Schemas available for all workgroups to reuse.
+  description: Common Schemas available for all workgroups to reuse.  A UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/common.png).
   contact:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
