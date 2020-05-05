@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
+  <title>How to create HTML Iframes</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+
+<div id="doc"></div>
+<div id="spec"></div>
+<div id="error1"></div>
+<div id="error2"></div>
+
+<script>
+$( "#doc" ).load( "/docs/location.html", function( response, status, xhr ) {
+  if ( status == "error" ) {
+    var msg = "Oops there was an error w the doc url: ";
+    $( "#error1" ).html( msg + xhr.status + " " + xhr.statusText );
+  }
+});
+
+$( "#spec" ).load( "/location.html", function( response, status, xhr ) {
+  if ( status == "error" ) {
+    var msg = "Oops there was an error w the spec url: ";
+    $( "#error2" ).html( msg + xhr.status + " " + xhr.statusText );
+  }
+});
+</script>
+
+</body>
+</html>
