@@ -8,15 +8,13 @@
 <body>
 <p>Put text here...</p>
 
-<b>Successful Response (should be blank):</b>
 <div id="success"></div>
-<b>Error Response:</b>
 <div id="error"></div>
 
 <script>
-$( "#success" ).load( "/not-here.php", function( response, status, xhr ) {
+$( "#success" ).load( "/location.html", function( response, status, xhr ) {
   if ( status == "error" ) {
-    var msg = "Sorry but there was an error: ";
+    var msg = "Oops there was an error: ";
     $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
   }
 });
