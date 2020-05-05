@@ -1,3 +1,5 @@
+name: true
+title: false
 plugins:
   - jekyll-relative-links
 relative_links:
