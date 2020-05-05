@@ -1,5 +1,6 @@
 name: true
 title: false
+theme: minima
 plugins:
   - jekyll-relative-links
 relative_links:
