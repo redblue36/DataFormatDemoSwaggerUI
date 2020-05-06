@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="bsc-logo.png">
+  <img src="docs/bsc-logo.png">
 </p>
 
 <p align="center">
