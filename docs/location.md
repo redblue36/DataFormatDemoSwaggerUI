@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-<h2>Blockchain in Transport Alliance Standards Council (BiTAS)</h2>
+<b>Blockchain in Transport Alliance Standards Council (BiTAS)</b>
 <br><br>
-<h3>BiTAS Std 120-2019: LOCATION COMPONENT SPECIFICATION</h3>
+<i>BiTAS Std 120-2019: LOCATION COMPONENT SPECIFICATION</i>
 </br></br>
 </p>
 
