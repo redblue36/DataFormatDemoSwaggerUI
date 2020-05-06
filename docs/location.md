@@ -1,4 +1,6 @@
-![BSC Logo](bsc-logo.png)
+<p align="center">
+  <img src="bsc-logo.png">
+</p>
 
 ## Blockchain in Transport Alliance Standards Council (BiTAS)
 ### BiTAS Std 120-2019: LOCATION COMPONENT SPECIFICATION
