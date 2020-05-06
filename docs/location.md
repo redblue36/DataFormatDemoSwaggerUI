@@ -3,6 +3,7 @@
 
 
 **Blockchain in Transport Alliance Standards Council (BiTAS)**
+</br></br>
 *BiTAS Std 120-2019: LOCATION COMPONENT SPECIFICATION*
 
 </p>
