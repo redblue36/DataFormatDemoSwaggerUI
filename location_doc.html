@@ -10,24 +10,16 @@
 <body>
 
 <div id="doc"></div>
-<div id="spec"></div>
-<div id="error1"></div>
-<div id="error2"></div>
 
 <script>
-$( "#doc" ).load( "docs/location.html", function( response, status, xhr ) {
-  if ( status == "error" ) {
-    var msg = "Oops there was an error w the doc url: ";
-    $( "#error1" ).html( msg + xhr.status + " " + xhr.statusText );
-  }
-});
 
-$( "#spec" ).load( "location.html", function( response, status, xhr ) {
-  if ( status == "error" ) {
-    var msg = "Oops there was an error w the spec url: ";
-    $( "#error2" ).html( msg + xhr.status + " " + xhr.statusText );
-  }
-});
+  $('#doc').load('docs/location.html', function(){
+            // this is the callback of first load, won't fire until data is returned
+          $('#doc').append('<div id="spec" />');
+           $('#spec').load('location.html', function(){
+            });//end second load
+});// end first load
+    
 </script>
 
 </body>
