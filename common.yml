@@ -250,6 +250,7 @@ components:
           description: Role of reporting Party
         ID:
           type: string
+          description: //TODO provide more detail on the intention for how this is to be used.
       required:
         - version
         - reportedByID
