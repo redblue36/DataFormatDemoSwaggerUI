@@ -2,9 +2,13 @@
   <img src="docs/bsc-logo.png">
 </p>
 
+![bsclogo](bsc-logo.png)
+
+<br>
+<br>
 <p align="center">
 <b>Blockchain in Transport Alliance Standards Council (BiTAS)</b>
-<br><br>
+<br>
 <i>BiTAS Std 120-2019: LOCATION COMPONENT SPECIFICATION</i>
 </br></br>
 </p>

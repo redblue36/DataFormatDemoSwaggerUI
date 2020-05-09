@@ -1,13 +1,8 @@
 openapi: 3.0.0
 info:
-  title: Location Component
+  title: Data Format Requirements Specification
   version: v3.0.0
-  description: |-
-    Scope
-    This document defines the Location Component that is used to identify the location of goods within the shipment process. The document identifies data elements and attributes that form a data structure to publish a given component location.
-
-    Introduction
-    The Location Component is a data structure used whenever a geographic location needs to be recorded on the Blockchain. The Location Component, contains all the information needed to determine a geographic location. The Location Component is used to define the location of any type of object or entity regardless of whether it is fixed (e.g. a building, port, rail station, etc.) or mobile (e.g. a vehicle or shipping container, etc.
+  description: "Requirements are captured using Open API Specification (OAS) as a means to streamline capturing:\n-\tStandard data element names following standard naming conventions\n-\tData relationships (e.g. associative, hierarchical)\n-\tMultiplicity/cardinality\n-\tValid values including enumerations\n-\tRequired vs. optional\n\nThis is a logical requirements specification and does not consider a specific technology or implementation.  The primary consumer of these requirements is the BSC Implementation TC (ITC).\n\nIt is anticipated the ITC can and will choose a different data organization that is optimal for storage and retrieval given implementation specifics and interoperability considerations.  The use of OAS and associated JSON-based examples by DFTC in this specification is solely a means to capture requirements for human consumption.  It does not specify or imply a physical API or JSON-oriented storage structure."
   contact:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
@@ -37,7 +32,30 @@ components:
                 Position structure can contain nested structures including optional (nullable) nested structures to handle scenarios where a method for specifying a location may have instances where a detailed location is needed and others where a detailed location description is not needed (or possible). For example, a location at a Warehouse would have as the root position structure (the root implements Position), the postal address of the warehouse. Within that structure could be nested a warehouse zone identifying an area that the warehouse is sub-divided into. And within the Warehouse Zone structure could be nested a bin or shelf that might identify the specific location needed for a warehouse picker to locate an item
               items:
                 $ref: '#/components/schemas/Position'
-      description: "The location component object is defined by the following structure. \n•\tGPS: Latitude and longitude\n•\tAccuracy\n•\tSPLC – Standard Point Location Code used mostly by Rail\n•\tAddress: building number, street, city, state, province, country, zip etc.\n•\tWarehouse / Storage: Floor, Isle, Lot, Bin etc.\n•\tYard/Parking/Any kind of open structure: Lot Name, Floor, Isle, Lot #\n\nA UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/location.png)."
+      description: |-
+        The overall logical data requirements and release management for the Location Component, as defined by BSC Data Format Technical Committee, is described in detail at this master location [linked here](https://redblue36.github.io/DataFormatDemoSwaggerUI/location_doc.html).
+
+        This specification has been used to generate a visual representation to easily digest the data structure.  This UML diagram is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/location.png).
+
+        INTENDED USAGE:
+
+        A location may have a nested relationship with aliases or alternate references for the same location.
+
+        When the position array contains more than 1 structure, each structure is meant to represent the same location but using a different method such as latitude/longitude, postal address etc.
+
+        Multiple methods are supported in order to meet these goals:
+        a) Make the Location Component suitable for multiple use cases
+        b) Support the expansion of the Location Component specification in a backwards-compatible way in the future
+
+        The intention is to improve the adoption rates of this Specification.  For example, the rail industry has an industry-specific method of specifying locations called the SPLC. Third parties may not have the ability to interpret this data so railway operators publishing locations in SPLC formats have the ability to publish a second more widely-known method such as latitude/longitude.
+
+        Position structure can contain nested structures including optional nested structures to handle scenarios where a method for specifying a location may have instances where a detailed location is needed and others where a detailed location description is not needed (or possible). For example, a location at a Warehouse would have as the root location structure (the root implements Position) specifying the postal address of the warehouse. Within that structure could be nested a warehouse zone identifying an area that the warehouse is sub-divided into. And within the Warehouse Zone structure could be nested a bin or shelf that might identify the specific location needed for a warehouse picker to locate an item
+
+        //TODO the nesting is only 2 levels deep in the original published Location Component specification and this OAS spec.  Need to reconcile/clarify the verbiage here vs. the specs.
+
+        //TODO warehouse zone, bin, shelf in in the text above but there is no reference to this in the data structure specified in the published spec.  It is specified in the OAS spec here.  Need to reconcile all this to ensure the data elements are properly defined, reviewed, and published.
+
+        Within the Position array, an optional precedence number (starting at 1 and incrementing from there) identifies the order in which structures are preferred. In other words, the structure with a Precedence value of 1 is the ‘native’ or preferred structure to use for determining the location. It is expected that data consumers will use the structure with Precedence 1 and ignore the others. Data consumers unable to interpret the structure (method) with Precedence 1 would move on to the structure with Precedence 2 but if that one also uses a method unfamiliar to them, then to 3, etc.
       x-tags:
         - Location/Location
       x-examples: {}
@@ -45,10 +63,7 @@ components:
     Position:
       title: Position
       type: object
-      description: |-
-        Position is dependant object and may be used to document locations when they are presented in a hierarchy.  Location Object has all the properties of Position object.  Location Object has mandatory ID (identifier) where position object does not have identifier.
-
-        A UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/location.png).
+      description: Position is dependant object and may be used to document locations when they are presented in a hierarchy.  Location Object has all the properties of Position object.  Location Object has mandatory ID (identifier) where position object does not have identifier.
       x-tags:
         - Location/Position
       properties:
@@ -65,7 +80,7 @@ components:
             - City
             - Link
             - Multiple
-          description: 'Type of Location.  A single or multiple qualifier (multiple qualifier’s: address, GeoCoord, SPLIC, City, etc.)'
+          description: Identfies the type of Location.
         latitude:
           type: number
           description: Value representing latitude in degrees and minutes.

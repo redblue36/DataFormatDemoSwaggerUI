@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: common
   version: ''
-  description: Common Schemas available for all workgroups to reuse.  A UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/common.png).
+  description: "Common Schemas available for all workgroups to reuse.  \n\nThis specification has been used to generate a visual representation to easily digest the data structure.  A UML diagram depicting this structure is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/common.png)."
   contact:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
@@ -37,7 +37,7 @@ components:
         time:
           type: string
           example: '2013-08-13T05:14:33-07:00'
-          description: "ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times"
+          description: ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times
     DimensionMeasure:
       title: DimensionMeasure
       type: object
@@ -63,7 +63,7 @@ components:
             - gross
         time:
           type: string
-          description: "ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times"
+          description: ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times
     ClimateMeasure:
       title: ClimateMeasure
       type: object
