@@ -66,5 +66,4 @@ A Location Component is a data structure that is always embedded within another 
 
 ##### Data Format Specification
 
-</br>
-</br>
+
