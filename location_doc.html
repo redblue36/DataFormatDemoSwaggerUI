@@ -5,22 +5,20 @@
   <META HTTP-EQUIV="Expires" CONTENT="-1">
   <title>BSC Data Format Requirements Specification</title>
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-</head>
 
+  <script>
+  $(document).ready(function(){ 
+  $('#doc').load("docs/location.html");
+  $('#specdoc').load("location.html");
+  });
+  </script>
+</head>
+  
 <body>
 
 <div id="doc"></div>
-
-<script>
-
-  $('#doc').load('docs/location.html', function(){
-            // this is the callback of first load, won't fire until data is returned
-          $('#doc').append('<div id="spec" />');
-           $('#spec').load('location.html', function(){
-            });//end second load
-});// end first load
-    
-</script>
+  
+<div id="specdoc"></div>
 
 </body>
 </html>
