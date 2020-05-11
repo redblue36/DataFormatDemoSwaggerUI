@@ -105,22 +105,14 @@ ISO 3166: [Codes for the representation of names of countries and their subdivis
 [Standard Point Location Code](https://www.railinc.com/rportal/standard-point-location-code)| RAILINC
 
 
-### Data Format Requirements
+### Requirements
 
-*The requirements associated to this data structure are captured using the [Open API Specification](https://en.wikipedia.org/wiki/OpenAPI_Specification) (OAS).  The intention is to use OAS to streamline the means to capture data requirements to include such items as:
--	Standard data element names following standard naming conventions
--	Data relationships (e.g. associative, hierarchical)
--	Multiplicity/cardinality
--	Valid values including enumerations
--	Required vs. optional
+#### Summary Diagram
 
-This is a logical requirements specification and does not consider a specific technology or implementation.  It is anticipated the BSC Implementation TC (ITC) can and will choose a different organization that is optimal for storage and retrieval given implementation specifics and interoperability considerations.  The use of OAS by DFTC in this logical specification does not specify or imply a physical API or JSON storage structure.*
-
-#### Diagram
+This diagram was auto-generated from the specification to provide a high-level view of data relationships and data attributes.
 
 ![Location diagram](location.png)
 </br>
 </br>
 
-#### Requirements
 
