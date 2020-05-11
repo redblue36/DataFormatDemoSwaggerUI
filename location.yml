@@ -66,7 +66,45 @@ components:
         //TODO provide specific detail on the Meta/ID field and how it is to be populated and what the intention here is for Location.  Is this an implementation specific detail to defer to the ITC??
       x-tags:
         - Location
-      x-examples: {}
+      x-examples:
+        'Location is only a simple address and no relevant position information is required ':
+          ID: '1234'
+          name: SERVPROV-5_413-426
+          qualifier: Address
+          address1: 2 ALPINE DR
+          address2: ''
+          city: CLOSTER
+          stateProvince: NJ
+          zipPostal: '07624'
+          country: USA
+        Location and its relevant position is displayed based on precedence:
+          ID: '1234'
+          name: SERVPROV-5_413-426
+          qualifier: Mulitple
+          positions:
+            - position: 1
+              qualifier: Address
+              Address1: 10 Alpine Dr
+              Address2: ''
+              City: Closter
+              stateProvince: NJ
+              zipPostal: '07627'
+              country: USA
+            - position: 2
+              qualifier: GeoCoord
+              lattitude: 40.03657
+              longitude: -75.38013
+              accuracyMeters: 10
+              altitudeMeters: 5
+            - position: 3
+              qualifier: SPLC
+              SPLC: NYK
+              stationName: Newark
+            - position: 4
+              qualifier: City
+              City: Closter
+              stateProvince: NJ
+              country: USA
       title: Location Component
     Position:
       title: Position
