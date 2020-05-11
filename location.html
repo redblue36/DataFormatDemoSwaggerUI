@@ -3,10 +3,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Swagger UI</title>
+    <title>BSC Data Format Requirements Specification</title>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="dist/swagger-ui.css" >
-    <link rel="icon" type="image/png" href="dist/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="dist/favicon-16x16.png" sizes="16x16" />
     <style>
       html
       {
@@ -28,9 +29,18 @@
         background: #fafafa;
       }
     </style>
+    
+    <script>
+      $(document).ready(function(){ 
+        $('#doc').load("docs/location.html");
+      });
+    </script>
+    
   </head>
 
   <body>
+    <div id="doc"></div>
+    
     <div id="swagger-ui"></div>
 
     <script src="dist/swagger-ui-bundle.js"> </script>
