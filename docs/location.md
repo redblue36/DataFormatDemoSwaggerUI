@@ -27,7 +27,6 @@
 - [Objective](#objective)
 - [Introduction](#introduction)
 - [Scope](#scope)
-  - [Out of scope](#out-of-scope) 
 - [Glossary](#glossary)
 - [References](#references)
 - [Data Format Requirements](#Data-Format-Requirements)
