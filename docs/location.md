@@ -4,13 +4,13 @@
 <br>
 <br>
 <p align="center">
-<b>Blockchain in Transport Alliance Standards Council (BiTAS)</b>
+<b>Blockchain in Transport Alliance Standards Council (BSC)</b>
 <br>
 <br>
 <br>
 <i>BSC Std 120-2019: LOCATION COMPONENT SPECIFICATION</i>
-</br>
-</br>
+<br>
+<br>
 <br>
 </p>
 
