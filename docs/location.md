@@ -29,7 +29,7 @@
 - [Scope](#scope)
 - [Glossary](#glossary)
 - [References](#references)
-- [Data Format Requirements](#Data-Format-Requirements)
+- [Data Format Requirements](#data-format-requirements)
 
 
 ### Versions
