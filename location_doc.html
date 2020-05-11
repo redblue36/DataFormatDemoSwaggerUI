@@ -4,23 +4,18 @@
   <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
   <META HTTP-EQUIV="Expires" CONTENT="-1">
   <title>BSC Data Format Requirements Specification</title>
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-</head>
 
+    <link rel="import" href="location.html">
+    
+</head>
+  
 <body>
 
-<div id="doc"></div>
-
-<script>
-
-  $('#doc').load('docs/location.html', function(){
-            // this is the callback of first load, won't fire until data is returned
-          $('#doc').append('<div id="spec" />');
-           $('#spec').load('location.html', function(){
-            });//end second load
-});// end first load
-    
-</script>
+  <script>
+    var link = document.querySelector('link[rel=import]');
+    var content = link.import.querySelector('#swagger-ui');
+    document.body.appendChild(document.importNode(content, true));
+  </script>
 
 </body>
 </html>

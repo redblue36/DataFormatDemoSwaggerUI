@@ -1,9 +1,6 @@
 <p align="center">
-  <img src="docs/bsc-logo.png">
+  <img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc-logo.png">
 </p>
-
-![bsclogo](bsc-logo.png)
-
 <br>
 <br>
 <p align="center">
@@ -66,5 +63,4 @@ A Location Component is a data structure that is always embedded within another 
 
 ##### Data Format Specification
 
-</br>
-</br>
+
