@@ -140,19 +140,19 @@ components:
             Country code of country conforming to standard ISO-3166 [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
             //TODO are these 2 or 3 character codes?
-            //TODO an enumerated list?
         buildingName:
           type: string
           description: Building name
         buildingFloor:
           type: string
           description: Building floor
+          example: '2'
         isle:
           type: string
-          description: isle 1
+          example: '1'
         bin:
           type: string
-          description: bin 5
+          example: '5'
         parkingName:
           type: string
           description: 'Yard/Parking/Any kind of open structure: Lot Name, Floor, Isle, LotId'
@@ -163,4 +163,4 @@ components:
         lotId:
           type: string
           description: //TODO lotid is not in the published spect.  Lot is referenced in ParkingName.
-          example: Lot15
+          example: '15'
