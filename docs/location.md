@@ -15,7 +15,7 @@
 </p>
 
 
-> **Note: this format is to demonstrate an option: use the combination of html/markdown to wrap the human readable docuemntation generated from the Location component's Open API spec doc.**
+> **Note: this format is to demonstrate an option: use the combination of html/markdown to wrap the human readable documentation generated from the Location component's Open API spec doc.**
 
 
 ### Contents
