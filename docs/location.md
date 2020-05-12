@@ -111,7 +111,7 @@ ISO 3166: [Codes for the representation of names of countries and their subdivis
 This diagram was auto-generated from the specification to provide a high-level view of data relationships and data attributes.
 
 ![Location diagram](location.png)
-</br>
-</br>
+<br>
+<br>
 
 
