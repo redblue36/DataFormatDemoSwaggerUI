@@ -25,7 +25,7 @@
 > 1. Always keep a line break after headers. 
 > 1. *Italicized text* is standard boilerplate text for all released specifications and should remain in the document.
 > 1. Remove this section before publication.
-
+>
 > **General style**
 >
 > 1. Position and language of the document should read like a requirements specification document.
@@ -36,6 +36,7 @@
 >     * Refer to the term blockchain as a general loose reference.  
 >     * References to APIs is an implementation detail that is not germane to this specification.
 >      * Noting JSON as being the stored on the blockchain is another example of an implementation detail that is NOT germane to this specification. 
+> 1. Representing data requirements in 3rd normal form isn't necessary.  Past specifications have done so alluding somewhat to implementation (e.g. use of surrogate keys for linkage for instance) leading to confusion.
 
 > **Template Version History**
 >
@@ -58,11 +59,11 @@
 
 ### Abstract
 
-*BSC Data Format Technical Committee and its Working Groups develop and publish requirements specifications for solving specific transportation related business problems using blockchain technology.  This specification captures data requirements -- data element names, relationships between elements, types, and rules such as valid values, enumerated lists, and required vs. optional values.*
+*BSC Data Format Technical Committee and its Working Groups develop and publish requirements specifications for solving specific transportation related business problems using blockchain technology.*
 
 **Add the text from June....making it up for now:**  *Two types of specifications are published.  Component specications describe reusable building blocks and do not standalone.  These building blocks are referenced within Document specifications.  Document specifications are published in support of a specific business process.*
 
-*Document specifications will be used as a key input by the BSC Implementation Technical Committee (ITC) to produce specific implementaiton level technical guidance for how data shall be written to and retrieved from blockchain.  It is this ITC end-deliverable that is the primary consumable artifact by BSC membership and industry at large.*
+*These specifications are written primarily to be used as a key input by the BSC Implementation Technical Committee (ITC) to produce implementaiton-level technical guidance for how data shall be written to and retrieved from blockchain.  It is this ITC end-deliverable that is the primary consumable artifact by BSC membership and industry at large.*
 
 ### Contents
 
@@ -196,6 +197,16 @@ Position structure can contain nested structures including optional nested struc
 
 #### Specification
 
+*Requirements are captured using Open API Specification (OAS) as a means to streamline capturing:*
+-	*Standard data element names following standard naming conventions*
+-	*Data relationships (e.g. associative, hierarchical)*
+-	*Multiplicity/cardinality*
+-	*Valid values including enumerations*
+-	*Required vs. optional*
+
+*This is a logical requirements specification and does not consider a specific technology or implementation.  The primary consumer of this section is the BSC Implementation Technical Committee (ITC).*
+
+*It is anticipated the ITC can and will choose a different data organization that is optimal for storage and retrieval given implementation specifics and interoperability considerations.  The use of OAS and associated JSON-based examples by DFTC in this specification is solely a means to capture requirements for human consumption.  It does not specify or imply a physical API or JSON-oriented storage structure.*
 <br>
 <br>
 

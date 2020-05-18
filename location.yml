@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  title: Data Format Requirements Specification
+  title: Specification for Location Component
   version: v3.0.0
-  description: "Requirements are captured using Open API Specification (OAS) as a means to streamline capturing:\n-\tStandard data element names following standard naming conventions\n-\tData relationships (e.g. associative, hierarchical)\n-\tMultiplicity/cardinality\n-\tValid values including enumerations\n-\tRequired vs. optional\n\nThis is a logical requirements specification and does not consider a specific technology or implementation.  The primary consumer of these requirements is the BSC Implementation TC (ITC).\n\nIt is anticipated the ITC can and will choose a different data organization that is optimal for storage and retrieval given implementation specifics and interoperability considerations.  The use of OAS and associated JSON-based examples by DFTC in this specification is solely a means to capture requirements for human consumption.  It does not specify or imply a physical API or JSON-oriented storage structure."
+  description: ''
   contact:
     name: Ben Kothari
     url: 'http://www.acuwize.com'
