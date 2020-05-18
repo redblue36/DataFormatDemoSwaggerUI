@@ -36,34 +36,6 @@ components:
         The overall logical data requirements and release management for the Location Component, as defined by BSC Data Format Technical Committee, is described in detail at this master location [linked here](https://redblue36.github.io/DataFormatDemoSwaggerUI/location_doc.html).
 
         This specification has been used to generate a visual representation to easily digest the data structure.  This UML diagram is [linked here](https://raw.githubusercontent.com/redblue36/DataFormatDemoSwaggerUI/master/diagrams/location.png).
-
-        INTENDED USAGE:
-
-        A location may have a nested relationship with aliases or alternate references for the same location.
-
-        When the position array contains more than 1 structure, each structure is meant to represent the same location but using a different method such as latitude/longitude, postal address etc.
-
-        The intention of supporting multiple methods is to:
-        a) Make the Location Component suitable for multiple use cases
-        b) Support the expansion of the Location Component specification in a backwards-compatible way in the future
-
-        By doing so, the desire is to improve the adoption rates of this Specification.  For example, the rail industry has an industry-specific method of specifying locations called the SPLC. Third parties may not have the ability to interpret this data so railway operators publishing locations in SPLC formats have the ability to publish a second more widely-known method such as latitude/longitude.
-
-        Position structure can contain nested structures including optional nested structures to handle scenarios where a method for specifying a location may have instances where a detailed location is needed and others where a detailed location description is not needed (or possible). For example, a location at a Warehouse would have as the root location structure (the root implements Position) specifying the postal address of the warehouse. Within that structure could be nested a warehouse zone identifying an area that the warehouse is sub-divided into. And within the Warehouse Zone structure could be nested a bin or shelf that might identify the specific location needed for a warehouse picker to locate an item
-
-        //TODO the nesting is only 2 levels deep in the original published Location Component specification and this OAS spec.  Need to reconcile/clarify the verbiage here vs. the specs.
-
-        //TODO there is a special qualifier called "multiple".  It is unclear how this is used in relation to the nesting that is noted.  For example -- multiple at level 2 does not allow for sub-postions at level 3 in this structure -- but maybe it should not.
-
-        //TODO warehouse zone, bin, shelf in in the text above  (that was in the original document) and it is in the OAS spec -- but there are no requirments definition in the published spec.  Need to reconcile all this to ensure the data elements are properly defined, reviewed, and published.  Suggests there might be an unpublished revision of location out there somewhere with this detail.
-
-        //TODO it seems like we need to clarify (1) a bin or shelf or row or sector cannot stand lone.  It's container such as the address of the warehouse would always apply.  And (2) a location can have multiple references.  It can have a street address and/or a geocode and/or others.
-
-        Within the Position array, an optional precedence number (starting at 1 and incrementing from there) identifies the order in which structures are preferred. In other words, the structure with a Precedence value of 1 is the ‘native’ or preferred structure to use for determining the location. It is expected that data consumers will use the structure with Precedence 1 and ignore the others. Data consumers unable to interpret the structure (method) with Precedence 1 would move on to the structure with Precedence 2 but if that one also uses a method unfamiliar to them, then to 3, etc.
-
-        Position values also specify the order of position from most general to most detailed.
-
-        //TODO provide specific detail on the Meta/ID field and how it is to be populated and what the intention here is for Location.  Is this an implementation specific detail to defer to the ITC??
       x-tags:
         - Location
       x-examples:
