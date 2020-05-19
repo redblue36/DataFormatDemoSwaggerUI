@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc-logo.png">
+  <img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc_logo.png">
 </p>
 <br>
 <br>
