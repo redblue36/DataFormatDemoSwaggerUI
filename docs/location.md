@@ -19,12 +19,11 @@
 > **Remove this set of instructions before publishing this deliverable.**
 >
 > **Usage guidelines**
-
+>
 > 1. Read the text at the beginning of each section for guidance for additional information for completing this document.  Remove these diretions before publication.
 > 1. Ensure to keep the same format for headers and content.  If there is a need to add a new section, please insert new ones sparingly and refresh the content table, as needed.  Rather than add new top level headings, it's preferable to add a subsection within one of the standard headings to maintain a standard flow.
-> 1. Always keep a line break after headers. 
+> 1. Keep a line break after headers. 
 > 1. *Italicized text* is standard boilerplate text for all released specifications and should remain in the document.
-> 1. Remove this section before publication.
 >
 > **General style**
 >
@@ -37,38 +36,45 @@
 >     * References to APIs is an implementation detail that is not germane to this specification.
 >      * Noting JSON as being the stored on the blockchain is another example of an implementation detail that is NOT germane to this specification. 
 > 1. Representing data requirements in 3rd normal form isn't necessary.  Past specifications have done so alluding somewhat to implementation (e.g. use of surrogate keys for linkage for instance) leading to confusion.
-
+>
 > **Template Version History**
 >
 > Version | Date | Author
 > ---------|----------|---------
 > BSC Std TBD | May 9, 2020 | BSC DFTC Directors
 >
-> This section is not part of the officially released specification.  The version history for the Working Group’s deliverable is in a later section of this document.
+> This template version section is not part of the officially released specification.  The version history for the Working Group’s deliverable is in a later section of this document.
 
 ### Work-in-progress / open items
 
 > **Remove this entire section, including the section header, before publishing this deliverable.**
 > Resolve all open issues prior to publishing this document.  Coordinate with other Working Groups as needed.  Raise questionables with DFTC Directors as it is possible items could be directed to the "out of scope" section of this document.
 
-1. the nesting is only 2 levels deep in the original published Location Component specification and this OAS spec.  Need to reconcile/clarify the verbiage here vs. the specs.
-1. there is a special qualifier called "multiple".  It is unclear how this is used in relation to the nesting that is noted.  For example -- multiple at level 2 does not allow for sub-postions at level 3 in this structure -- but maybe it should not.
-1. warehouse zone, bin, shelf in in the text above  (that was in the original document) and it is in the OAS spec -- but there are no requirments definition in the published spec.  Need to reconcile all this to ensure the data elements are properly defined, reviewed, and published.  Suggests there might be an unpublished revision of location out there somewhere with this detail.
-1. it seems like we need to clarify (1) a bin or shelf or row or sector cannot stand lone.  It's container such as the address of the warehouse would always apply.  And (2) a location can have multiple references.  It can have a street address and/or a geocode and/or others.
-1. provide specific detail on the Meta/ID field and how it is to be populated and what the intention here is for Location.  Is this an implementation specific detail to defer to the ITC??
+1. The nesting is only 2 levels deep in the original published Location Component specification and this OAS spec.  Need to reconcile/clarify the verbiage here vs. the specs.
+1. There is a special qualifier called "multiple".  It is unclear how this is used in relation to the nesting that is noted.  For example -- multiple at level 2 does not allow for sub-postions at level 3 in this structure -- but maybe it should not.
+1. Warehouse zone, bin, shelf in in the text above  (that was in the original document) and it is in the OAS spec -- but there are no requirments definition in the published spec.  Need to reconcile all this to ensure the data elements are properly defined, reviewed, and published.  Suggests there might be an unpublished revision of location out there somewhere with this detail.
+1. It seems like we need to clarify (1) a bin or shelf or row or sector cannot stand lone.  It's container such as the address of the warehouse would always apply.  And (2) a location can have multiple references.  It can have a street address and/or a geocode and/or others.
+1. Provide specific detail on the Meta/ID field and how it is to be populated and what the intention here is for Location.  Is this an implementation specific detail to defer to the ITC??
 
-### Abstract
+### Foreword
 
-*BSC Data Format Technical Committee and its Working Groups develop and publish requirements specifications for solving specific transportation related business problems using blockchain technology.*
+*BSC Data Format Technical Committee develops and publishes requirements specifications for solving specific transportation related business problems using blockchain technology.*
 
-**Add the text from June....making it up for now:**  *Two types of specifications are published.  Component specications describe reusable building blocks and do not standalone.  These building blocks are referenced within Document specifications.  Document specifications are published in support of a specific business process.*
+*These specifications are primarily used by the BSC Implementation Technical Committee (ITC) to produce implementaiton-level technical guidance for how data shall be written to and retrieved from blockchain.  It is this ITC end-deliverable that is the primary consumable artifact by BSC membership and industry at large.*
 
-*These specifications are written primarily to be used as a key input by the BSC Implementation Technical Committee (ITC) to produce implementaiton-level technical guidance for how data shall be written to and retrieved from blockchain.  It is this ITC end-deliverable that is the primary consumable artifact by BSC membership and industry at large.*
+*There are two types of data format specifications.*
+* **Component specifications** *outline a grouping of individual data objects and other components that make up a logical grouping of information.  Examples inlude location or party.  Components do not standalone but are reusable building blocks used in forming a Document.*  
+* **Document specifications** *may include a grouping of components used to describe the data elements supporting a specific business process.  An example might be a status tracking event.*
+
+### Copyright or Similar Language TBD
+
+> TODO:  Review copyright section with BSC counsel.
+
+*BSC Std XXX-20XX: X Component Specification is an open sourced specification owned by the Blockchain in Transport Alliance Standards Council (BSC). Any licensing or usage verbiage should be inserted here.*
 
 ### Contents
 
 - [Versions](#versions)
-- [Copyright](#copyright)
 - [Acknowledgements](#ackowledgements)
 - [Objective](#objective)
 - [Introduction](#introduction)
@@ -76,24 +82,20 @@
 - [Glossary](#glossary)
 - [References](#references)
 - [Requirements](#requirements)
-  - [Diagram](#diagram) 
-  - [Intentions](#intentions) 
+  - [Intentions](#intentions)
+  - [Diagram](#diagram)
+  - [Examples](#examples)
   - [Specification](#specification) 
 
 ### Versions
 
 > **Remove this text before publishing this deliverable.**
-> Update the name of the person and the Working Group under which this specificiation was produced or revised.
+> Update the name of the person and the authorized WG under which this update was performed. For naming convention use “BSC Std XXX-year vX: BSC Standard for…”]
 
 Version | Date | Author
 ---------|----------|---------
 BSC Std 120-2019 v1.0 | February 27, 2019 | Pratik Soni, BiTAS Tracking Data WG Chair
 Work in progress | May 9, 2020 | BSC DFTC Directors reformat existing spec to new style guide
-
-### Copyright
-
-> **Remove this text before publishing this deliverable.**
-TODO Review and revise this section per board and legal direction
 
 ### Ackowledgements
 
@@ -110,15 +112,16 @@ Participant10 | Participant11 | Participant12
 ### Objective
 
 > **Remove this text before publishing this deliverable.**
-> Clearly state the objective of the specification and what the specification is trying to
-achieve
+> Replace with a clear statement of the objective of the specification and what the specification is trying to achieve. Intention of the Specification.
+>
+> Clearly identify in **bold** text this specification outlines a **Component** or a **Document**.
 
 Define a **Location Component specification** to provide a common structure to represent where an activity happens or where someone or something is located.  This construct is fundamental to transportation and logistics operations.  It is also fundamental to supporting business operations such as account management, pricing, and billing.  The structure can represent multiple, necessary forms of geographic identification.
 
 ### Introduction
 
 > **Remove this text before publishing this deliverable.**
-> Provide a short background description.  Include some measure of general usage context if it is helpful to aide understanding.
+> Replace with a short background descriptor on the need for the objective and how this specification can be used in different applications. Include core tenants and other guiding principles and other things you were trying to accomplish that ultimately led to this specification being the optimal solution.]
 
 The Location Component is a data structure used whenever a geographic location needs to be represented within a ***host Document*** such one that supports shipment tracking, invoicing, etc.  The Location Component, as a self-contained structure, contains all the information needed to determine a geographic location.
 
@@ -137,7 +140,7 @@ Examples:
 ### Scope
 
 > **Remove this text before publishing this deliverable.**
-> Clearly delineate the boundary lines drawn for what is included in the specification and what is excluded.  The out of scope section is optional and should be removed if it does not apply or provide useful clarity.
+> Replace with a clear delineation of the boundary lines drawn for what is included in the specification and what is excluded.
 
 -	Identify where an item is or has been within a journey 
 -	Identify where an item is planned to be within an itinerary
@@ -151,9 +154,7 @@ Examples:
 ### Glossary
 
 > **Remove this text before publishing this deliverable.**
-> Use this table to introduce new glossary items, terms, abbreviations and such. 
-> Ensure that the Standard Review WG include these items prior to TC final approval. 
-> Please do not define a data element in this section.  Data elements are defined in a following section.
+> Replace with a table to introduce glossary terms/abbreviations specific to this specification. At a future date we will provide a link to the Glossary of BSC Terms.
 
 *New terms and abbreviations introduced by this specification are listed in this section.  These items will be added to the BSC Glossary [linked here](url).*  **TODO need url.**
 
@@ -167,7 +168,9 @@ FSAC | Freight Station Accounting Code
 ### References
 
 > **Remove this text before publishing this deliverable.**
-> Mention all references to other standards or resources you used in this section. The title and hyperlink point to the specific document referenced.  Do not simply add a link to wikipedia.org, ieee.org or gs1.org as a link as a this general is not helpful.
+> In this section, list the references to the Standards document and/or other resources used or referenced in the Specification in this section. 
+> * Reference Name:  Provide the URL to the specific page within the exact Standards or other document referenced. Do not simply add a link to wikipedia.org, ieee.org or gs1.org -- a link this generalized is not helpful.
+> * Reference Organization:  Name of the organization with hyperlink if applicable
 
 Reference Name | Reference Organization
 ---------|----------
@@ -175,12 +178,6 @@ ISO 3166: [Codes for the representation of names of countries and their subdivis
 [Standard Point Location Code](https://www.railinc.com/rportal/standard-point-location-code)| RAILINC
 
 ### Requirements
-
-#### Diagram
-
-*This diagram was auto-generated from the formal specification to provide a high-level view of data relationships and data attributes.*
-
-![Location diagram](location.png)
 
 #### Intentions
 
@@ -194,6 +191,77 @@ The intention of supporting multiple methods is to: a) Make the Location Compone
 By doing so, the desire is to improve the adoption rates of this Specification. For example, the rail industry has an industry-specific method of specifying locations called the SPLC. Third parties may not have the ability to interpret this data so railway operators publishing locations in SPLC formats have the ability to publish a second more widely-known method such as latitude/longitude.
 
 Position structure can contain nested structures including optional nested structures to handle scenarios where a method for specifying a location may have instances where a detailed location is needed and others where a detailed location description is not needed (or possible). For example, a location at a Warehouse would have as the root location structure (the root implements Position) specifying the postal address of the warehouse. Within that structure could be nested a warehouse zone identifying an area that the warehouse is sub-divided into. And within the Warehouse Zone structure could be nested a bin or shelf that might identify the specific location needed for a warehouse picker to locate an item
+
+#### Diagram
+
+*This diagram was auto-generated from the formal specification to provide a high-level view of data relationships and data attributes.*
+
+![Location diagram](location.png)
+
+#### Examples
+
+> **Remove this text before publishing this deliverable.**  This section is optional.  Only provide examples if it helps with clarity.
+
+*Examples in this form are provided to simply illustrate the general structure of the Specification that follows.*
+
+1. Location as a simple address; no relevant position information is required 
+
+```json
+{
+  "ID": "1234",
+  "name": "SERVPROV-5_413-426",
+  "qualifier": "Address",
+  "address1": "2 ALPINE DR",
+  "address2": "",
+  "city": "CLOSTER",
+  "stateProvince": "NJ",
+  "zipPostal": "07624",
+  "country": "USA"
+}
+```
+
+2. Location plus position based on precedence
+
+```json
+{
+  "ID": "1234",
+  "name": "SERVPROV-5_413-426",
+  "qualifier": "Mulitple",
+  "positions": [
+    {
+      "position": 1,
+      "qualifier": "Address",
+      "Address1": "10 Alpine Dr",
+      "Address2": "",
+      "City": "Closter",
+      "stateProvince": "NJ",
+      "zipPostal": "07627",
+      "country": "USA"
+    },
+    {
+      "position": 2,
+      "qualifier": "GeoCoord",
+      "lattitude": 40.03657,
+      "longitude": -75.38013,
+      "accuracyMeters": 10,
+      "altitudeMeters": 5
+    },
+    {
+      "position": 3,
+      "qualifier": "SPLC",
+      "SPLC": "NYK",
+      "stationName": "Newark"
+    },
+    {
+      "position": 4,
+      "qualifier": "City",
+      "City": "Closter",
+      "stateProvince": "NJ",
+      "country": "USA"
+    }
+  ]
+}
+```
 
 #### Specification
 
