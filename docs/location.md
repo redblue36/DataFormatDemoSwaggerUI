@@ -1,13 +1,15 @@
 <p align="center">
   <img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc_logo.png">
+<br>
+<br>
+<br>
+<br>
+<br>
 </p>
-<br>
-<br>
+
+> **Remove this set of instructions before publishing this deliverable.** The title below should carry the “COMPONENT” or “DOCUMENT” qualifier for the specification per the charter.
+
 <p align="center">
-<b>Blockchain in Transport Alliance Standards Council (BSC)</b>
-<br>
-<br>
-<br>
 <i>BSC Std 120-2019: LOCATION COMPONENT SPECIFICATION</i>
 <br>
 <br>
@@ -32,9 +34,9 @@
 > 1. Summarizing charter language to help frame certain sections of the specification such as the Objectives, Introduction, and Scope Sections is appropriate.  Reframe the wording keeping in mind the target audience is the ITC.
 > 1. The primary audience for this document is the BSC Implementation TC (ITC).  If there is additional information helpful to convey to the DFTC Directors and/or the ITC, please attach separately in memorandum form.
 > 1. Please don't refer to implementation specifics in this requirements specfication.  These details will be outlined by the ITC in a subsequent activity.
->     * Refer to the term blockchain as a general loose reference.  
+>     * Any reference to the term blockchain is a general loose reference.  
 >     * References to APIs is an implementation detail that is not germane to this specification.
->      * Noting JSON as being the stored on the blockchain is another example of an implementation detail that is NOT germane to this specification. 
+>     * Noting JSON as being the stored on the blockchain is another example of an implementation detail that is NOT germane to this specification. 
 > 1. Representing data requirements in 3rd normal form isn't necessary.  Past specifications have done so alluding somewhat to implementation (e.g. use of surrogate keys for linkage for instance) leading to confusion.
 >
 > **Template Version History**
@@ -48,7 +50,7 @@
 ### Work-in-progress / open items
 
 > **Remove this entire section, including the section header, before publishing this deliverable.**
-> Resolve all open issues prior to publishing this document.  Coordinate with other Working Groups as needed.  Raise questionables with DFTC Directors as it is possible items could be directed to the "out of scope" section of this document.
+> Resolve all open issues prior to publishing this document.  Coordinate with other Working Groups as needed.  Raise questions with DFTC Directors as it is possible items could be directed to the "out of scope" section of this document.
 
 1. The nesting is only 2 levels deep in the original published Location Component specification and this OAS spec.  Need to reconcile/clarify the verbiage here vs. the specs.
 1. There is a special qualifier called "multiple".  It is unclear how this is used in relation to the nesting that is noted.  For example -- multiple at level 2 does not allow for sub-postions at level 3 in this structure -- but maybe it should not.
