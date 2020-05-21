@@ -1,4 +1,3 @@
-![logo](bsc_logo.png)
 <p align="center">
 <img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc_logo.png">
 <br>
@@ -104,9 +103,9 @@ Work in progress | May 9, 2020 | BSC DFTC Directors reformat existing spec to ne
 
   &nbsp; |   &nbsp; | &nbsp;
 ---------|----------|---------
-**BSC Standard Council Board** |
+**BiTA Standard Council Board** |
 Participant1 | Participant2 | Participant3
-**BSC Data Format Data Technical Committee** |
+**Data Format Data Technical Committee** |
 Participant4 | Participant5 | Participant6
 **Working Group** |
 Participant7 | Participant8 | Participant9
@@ -181,7 +180,7 @@ ISO 3166: [Codes for the representation of names of countries and their subdivis
 #### Intentions
 
 > **Remove this text before publishing this deliverable.**
-> It is very imortant to capture the intention and rationale for "why" the requirements are formulated the way they are in the "requirements" section.  Include this detail in this section.
+> It is very imoprtant to capture the intention and rationale for "why" the requirements are formulated the way they are in the "requirements" section.  Include this detail in this section.
 
 A location may have a nested relationship with aliases or alternate references for the same location.  When the position array contains more than 1 structure, each structure is meant to represent the same location but using a different method such as latitude/longitude, postal address etc.
 
