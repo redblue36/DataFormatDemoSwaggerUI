@@ -1,5 +1,6 @@
+![logo](bsc_logo.png)
 <p align="center">
-  <img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc_logo.png">
+<img src="https://redblue36.github.io/DataFormatDemoSwaggerUI/docs/bsc_logo.png">
 <br>
 <br>
 <br>
@@ -62,10 +63,10 @@
 
 *BSC Data Format Technical Committee develops and publishes requirements specifications for solving specific transportation related business problems using blockchain technology.*
 
-*These specifications are primarily used by the BSC Implementation Technical Committee (ITC) to produce implementaiton-level technical guidance for how data shall be written to and retrieved from blockchain.  It is this ITC end-deliverable that is the primary consumable artifact by BSC membership and industry at large.*
+*These specifications are primarily used by the BSC Implementation Technical Committee (ITC) to produce implementation-level technical guidance for how data shall be written to and retrieved from blockchain.  It is this ITC end-deliverable that is the primary consumable artifact by BSC membership and industry at large.*
 
 *There are two types of data format specifications.*
-* **Component specifications** *outline a grouping of individual data objects and other components that make up a logical grouping of information.  Examples inlude location or party.  Components do not standalone but are reusable building blocks used in forming a Document.*  
+* **Component specifications** *outline a grouping of individual data objects and other components that make up a logical grouping of information.  Examples include location or party.  Components do not standalone but are reusable building blocks used in forming a Document.*  
 * **Document specifications** *may include a grouping of components used to describe the data elements supporting a specific business process.  An example might be a status tracking event.*
 
 ### Copyright or Similar Language TBD
@@ -125,13 +126,13 @@ Define a **Location Component specification** to provide a common structure to r
 > **Remove this text before publishing this deliverable.**
 > Replace with a short background descriptor on the need for the objective and how this specification can be used in different applications. Include core tenants and other guiding principles and other things you were trying to accomplish that ultimately led to this specification being the optimal solution.]
 
-The Location Component is a data structure used whenever a geographic location needs to be represented within a ***host Document*** such one that supports shipment tracking, invoicing, etc.  The Location Component, as a self-contained structure, contains all the information needed to determine a geographic location.
+The Location Component is a data structure used whenever a geographic location needs to be represented within a *** Document*** such one that supports shipment tracking, invoicing, etc.  The Location Component, as a self-contained structure, contains all the information needed to determine a geographic location.
 
 The Location Component is used to define the location of any type of object or entity regardless of whether it is fixed (e.g. a building, port, rail station, etc) or mobile (e.g. a vehicle or shipping container, etc.).
 
 ![figure2](location-figure2.png)
 
-A Location Component is a data structure that is always embedded a host Document.  In other words, a Location Component can never exist in isolation on the blockchain. This is because the other data structure(s) define the accompanying data depending on the purpose of the Location Component. 
+A Location Component is a data structure that is always embedded a Document.  In other words, a Location Component can never exist in isolation on the blockchain. This is because the other data structure(s) define the accompanying data depending on the purpose of the Location Component. 
 
 Examples:
 -	Track the location of a shipping container
@@ -148,10 +149,6 @@ Examples:
 -	Identify where an item is planned to be within an itinerary
 -	Transportation and logistics use cases involving tracking and tracing.  As such airline, railway, roadway, ocean, and fixed warehousing and related custodial operations  such as pickup, delivery, drayage, customs, etc. are in scope.
 -	Identify standard data elements & attributes known across multiple industries to form a starting data structure with the ability to add custom and/or unique Position attributes that provide greater position accuracy.
-
-#### Out of scope:
-
--	Consistent with the generalized nature of a Component Specification, the context for how this specification is used is not covered.  This will be provided in the BSC Document specification where this component is utilized.
 
 ### Glossary
 
