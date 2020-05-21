@@ -5,3 +5,5 @@
   (yes, replace .md shown in #1 with .html)<br>
   $('#doc').load("docs/location.html");<br>
 1. Point browser to your cloned version of https://redblue36.github.io/DataFormatDemoSwaggerUI/location.html to view the page.
+
+As an aside, Stoplight Studio works pretty well to author the OAS and .md markdown.
