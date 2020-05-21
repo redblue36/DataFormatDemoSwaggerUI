@@ -275,5 +275,3 @@ Position structure can contain nested structures including optional nested struc
 
 *It is anticipated the ITC can and will choose a different data organization that is optimal for storage and retrieval given implementation specifics and interoperability considerations.  The use of OAS and associated JSON-based examples by DFTC in this specification is solely a means to capture requirements for human consumption.  It does not specify or imply a physical API or JSON-oriented storage structure.*
 <br>
-<br>
-
